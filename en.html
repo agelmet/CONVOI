@@ -827,7 +827,7 @@ function goHero(){hero.classList.add('go')}
 var intro=$('#intro'),seen=false;try{seen=!!sessionStorage.getItem('convoi-intro')}catch(e){}
 if(intro&&!seen&&!RM&&!d.hidden){intro.classList.add('run');try{sessionStorage.setItem('convoi-intro','1')}catch(e){}
  setTimeout(function(){intro.classList.add('open')},1050);setTimeout(goHero,1300);setTimeout(function(){intro.remove()},2300)}
-else{if(intro)intro.remove();requestAnimationFrame(goHero)}
+else{if(intro)intro.remove();requestAnimationFrame(goHero);setTimeout(goHero,60)}
 
 /* ---------- start ---------- */
 $('#yr').textContent=new Date().getFullYear();
